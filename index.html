@@ -235,12 +235,58 @@
         </table>
       </section>
 
+      <section id="detalhes" aria-labelledby="titulo-detalhes">
+        <h2 id="titulo-detalhes">Detalhes do jogador</h2>
+
+        <article aria-labelledby="nome-jogador-selecionado">
+          <h3 id="nome-jogador-selecionado">August</h3>
+          <p>Jogadora selecionada para visualização.</p>
+
+          <dl>
+            <dt>Papel na partida</dt>
+            <dd>Caça</dd>
+
+            <dt>Sala</dt>
+            <dd>Centro-LS</dd>
+
+            <dt>Status de conexão</dt>
+            <dd>Online</dd>
+
+            <dt>Status de prontidão</dt>
+            <dd>Pronta para iniciar</dd>
+
+            <dt>Última posição GPS registrada</dt>
+            <dd>Latitude -19.9245 e longitude -43.9352</dd>
+          </dl>
+
+          <p>
+            <button type="button">Editar jogador</button>
+            <button type="button">Excluir jogador</button>
+          </p>
+        </article>
+      </section>
+
+      <aside aria-labelledby="titulo-privacidade">
+        <h2 id="titulo-privacidade">Uso da localização</h2>
+        <p>
+          As posições dos jogadores devem ser compartilhadas apenas entre os
+          participantes da sala durante a partida.
+        </p>
+      </aside>
+
       <section id="mapa" aria-labelledby="titulo-mapa">
         <h2 id="titulo-mapa">Mapa da partida</h2>
-        <p>
-          Esta área será preparada para exibir o mapa e as posições dos
-          jogadores.
-        </p>
+        <article>
+          <h3>Posições em tempo real</h3>
+          <p>
+            O mapa da cidade e os marcadores de localização serão exibidos
+            aqui futuramente com Leaflet e dados do OpenStreetMap.
+          </p>
+          <p>
+            Nesta etapa, as coordenadas dos jogadores já estão representadas
+            na listagem e na área de detalhes.
+          </p>
+        </article>
       </section>
     </main>
 
