@@ -132,7 +132,107 @@
 
       <section id="jogadores" aria-labelledby="titulo-jogadores">
         <h2 id="titulo-jogadores">Jogadores da sala</h2>
-        <p>A lista de participantes da partida será apresentada nesta área.</p>
+        <p>Participantes cadastrados na sala Centro-LS.</p>
+
+        <form action="#jogadores" method="get" role="search">
+          <fieldset>
+            <legend>Localizar jogadores</legend>
+
+            <p>
+              <label for="pesquisa">Pesquisar por nickname</label><br>
+              <input
+                id="pesquisa"
+                name="pesquisa"
+                type="search"
+                placeholder="Digite um nickname"
+              >
+              <button type="submit">Pesquisar</button>
+            </p>
+
+            <p>
+              <label for="filtro-papel">Filtrar por papel</label><br>
+              <select id="filtro-papel" name="filtro-papel">
+                <option value="todos">Todos os papéis</option>
+                <option value="cacador">Caçadores</option>
+                <option value="caca">Caças</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="filtro-conexao">Filtrar por conexão</label><br>
+              <select id="filtro-conexao" name="filtro-conexao">
+                <option value="todos">Todos os status</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="ordenacao">Ordenar por</label><br>
+              <select id="ordenacao" name="ordenacao">
+                <option value="nickname">Nickname (A–Z)</option>
+                <option value="papel">Papel na partida</option>
+                <option value="conexao">Status de conexão</option>
+                <option value="pronto">Prontidão</option>
+              </select>
+              <button type="submit">Aplicar filtros</button>
+            </p>
+          </fieldset>
+        </form>
+
+        <table>
+          <caption>
+            Jogadores da sala Centro-LS
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Nickname</th>
+              <th scope="col">Papel</th>
+              <th scope="col">Conexão</th>
+              <th scope="col">Prontidão</th>
+              <th scope="col">Posição GPS</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">August</th>
+              <td>Caça</td>
+              <td>Online</td>
+              <td>Pronto</td>
+              <td>-19.9245, -43.9352</td>
+              <td>
+                <a href="#detalhes">Ver detalhes</a>
+                <button type="button">Editar</button>
+                <button type="button">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Zagno</th>
+              <td>Caçador</td>
+              <td>Online</td>
+              <td>Pronto</td>
+              <td>-19.9220, -43.9370</td>
+              <td>
+                <a href="#detalhes">Ver detalhes</a>
+                <button type="button">Editar</button>
+                <button type="button">Excluir</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Vieira</th>
+              <td>Caça</td>
+              <td>Offline</td>
+              <td>Não pronta</td>
+              <td>-19.9280, -43.9401</td>
+              <td>
+                <a href="#detalhes">Ver detalhes</a>
+                <button type="button">Editar</button>
+                <button type="button">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section id="mapa" aria-labelledby="titulo-mapa">
