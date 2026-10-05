@@ -35,7 +35,99 @@
 
       <section id="cadastro" aria-labelledby="titulo-cadastro">
         <h2 id="titulo-cadastro">Cadastrar jogador</h2>
-        <p>O formulário de cadastro será apresentado nesta área.</p>
+        <p>
+          Preencha os dados do participante para incluí-lo em uma sala de
+          jogo.
+        </p>
+
+        <form action="#cadastro" method="get">
+          <fieldset>
+            <legend>Dados do jogador</legend>
+
+            <p>
+              <label for="nickname">Nickname</label><br>
+              <input
+                id="nickname"
+                name="nickname"
+                type="text"
+                autocomplete="nickname"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="papel">Papel na partida</label><br>
+              <select id="papel" name="papel" required>
+                <option value="">Selecione um papel</option>
+                <option value="cacador">Caçador</option>
+                <option value="caca">Caça</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="sala">Sala</label><br>
+              <input
+                id="sala"
+                name="sala"
+                type="text"
+                placeholder="Ex.: Centro-LS"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="latitude">Latitude atual</label><br>
+              <input
+                id="latitude"
+                name="latitude"
+                type="number"
+                step="any"
+                placeholder="Ex.: -19.9245"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="longitude">Longitude atual</label><br>
+              <input
+                id="longitude"
+                name="longitude"
+                type="number"
+                step="any"
+                placeholder="Ex.: -43.9352"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="conexao">Status de conexão</label><br>
+              <select id="conexao" name="conexao" required>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+            </p>
+
+            <p>
+              <input id="pronto" name="pronto" type="checkbox" value="sim">
+              <label for="pronto">Jogador pronto para iniciar a partida</label>
+            </p>
+
+            <p>
+              <label for="observacoes">Observações</label><br>
+              <textarea
+                id="observacoes"
+                name="observacoes"
+                rows="4"
+                placeholder="Informações adicionais sobre o jogador."
+              ></textarea>
+            </p>
+
+            <p>
+              <button type="submit">Cadastrar jogador</button>
+              <button type="reset">Limpar campos</button>
+            </p>
+          </fieldset>
+        </form>
       </section>
 
       <section id="jogadores" aria-labelledby="titulo-jogadores">
