@@ -242,7 +242,8 @@ textarea:focus {
   border-color: var(--vermelho);
 }
 
-input:invalid:not(:placeholder-shown) {
+input:user-invalid,
+select:user-invalid {
   border-color: var(--vermelho);
 }
 
