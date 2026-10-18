@@ -1,0 +1,99 @@
+/* ===== Identidade visual: cinza escuro + vermelho ===== */
+:root {
+  --fundo: #1e1e1e;
+  --painel: #2b2b2b;
+  --painel-claro: #383838;
+  --borda: #4a4a4a;
+  --texto: #f2f2f2;
+  --texto-suave: #c4c4c4;
+  --vermelho: #d62828;
+  --vermelho-escuro: #a31d1d;
+  --verde: #5fd068;
+}
+
+/* ===== Base e tipografia ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--vermelho);
+  border-bottom: 2px solid var(--vermelho);
+  padding-bottom: 0.4rem;
+}
+
+a {
+  color: #ff6b6b;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* ===== Cabeçalho e navegação ===== */
+header {
+  background-color: var(--painel);
+  border-bottom: 4px solid var(--vermelho);
+  padding: 1.5rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--vermelho);
+}
+
+header p {
+  margin: 0.25rem 0 1rem;
+  color: var(--texto-suave);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  background-color: var(--painel-claro);
+  color: var(--texto);
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--vermelho);
+  border-color: var(--vermelho);
+}
+
+footer {
+  padding: 1rem 2rem;
+  background-color: var(--painel);
+  border-top: 1px solid var(--borda);
+  color: var(--texto-suave);
+  text-align: center;
+}
