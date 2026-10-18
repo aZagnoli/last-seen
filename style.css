@@ -134,3 +134,128 @@ aside h2 {
 #inicio {
   border-left: 4px solid var(--vermelho);
 }
+
+/* ===== Formulários ===== */
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 1rem 0 0;
+  padding: 1.25rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  color: var(--vermelho);
+}
+
+fieldset p {
+  margin: 0;
+}
+
+.campo-largo {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: var(--fundo);
+  color: var(--texto);
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9a9a9a;
+}
+
+input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--vermelho);
+  vertical-align: middle;
+}
+
+input[type="checkbox"] + label {
+  margin-bottom: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ===== Botões ===== */
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--vermelho);
+  color: #ffffff;
+  border: 1px solid var(--vermelho);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  border-color: var(--borda);
+  color: var(--texto);
+}
+
+/* ===== Estados de interação ===== */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--texto-suave);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--vermelho);
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: var(--vermelho);
+}
+
+button:hover {
+  background-color: var(--vermelho-escuro);
+  border-color: var(--vermelho-escuro);
+}
+
+button[type="reset"]:hover {
+  background-color: var(--painel-claro);
+  border-color: var(--texto-suave);
+}
+
+button:active {
+  transform: translateY(1px);
+}
