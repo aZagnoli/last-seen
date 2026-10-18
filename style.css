@@ -350,3 +350,79 @@ button.perigo:hover {
   background-color: var(--vermelho);
   color: #ffffff;
 }
+
+/* ===== Detalhes do jogador ===== */
+#detalhes article {
+  padding: 1rem;
+  background-color: var(--painel-claro);
+  border-radius: 6px;
+}
+
+#detalhes h3 {
+  margin-top: 0;
+  color: var(--vermelho);
+  font-size: 1.5rem;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+  margin: 1rem 0;
+}
+
+dt {
+  font-weight: bold;
+  color: var(--texto-suave);
+}
+
+dd {
+  margin: 0;
+}
+
+#detalhes article > p:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* ===== Mapa (área reservada) ===== */
+#mapa article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  padding: 1.5rem;
+  background-color: var(--fundo);
+  border: 2px dashed var(--vermelho);
+  border-radius: 6px;
+}
+
+#mapa h3 {
+  margin-top: 0;
+}
+
+/* ===== Mensagens e estados do sistema ===== */
+.mensagem {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 5px solid;
+  border-radius: 4px;
+  background-color: var(--painel-claro);
+}
+
+.mensagem.sucesso {
+  border-color: var(--verde);
+  color: var(--verde);
+}
+
+.mensagem.erro {
+  border-color: var(--vermelho);
+  color: #ff8c8c;
+}
+
+.mensagem.aviso {
+  border-color: #ffd166;
+  color: #ffd166;
+}
