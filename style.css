@@ -97,3 +97,40 @@ footer {
   color: var(--texto-suave);
   text-align: center;
 }
+
+/* ===== Layout principal (CSS Grid) ===== */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+main > section,
+main > aside {
+  padding: 1.5rem;
+  background-color: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+}
+
+#inicio,
+#cadastro,
+#jogadores,
+#mapa {
+  grid-column: 1 / -1;
+}
+
+aside {
+  border-left: 4px solid var(--vermelho);
+}
+
+aside h2 {
+  font-size: 1.2rem;
+}
+
+#inicio {
+  border-left: 4px solid var(--vermelho);
+}
