@@ -259,3 +259,94 @@ button[type="reset"]:hover {
 button:active {
   transform: translateY(1px);
 }
+
+/* ===== Listagem de jogadores (tabela) ===== */
+table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+  color: var(--texto-suave);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--borda);
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--vermelho-escuro);
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--painel-claro);
+}
+
+tbody tr:hover {
+  background-color: #4a2a2a;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.acoes button,
+.acoes a {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.acoes button:not(.perigo) {
+  background-color: var(--painel-claro);
+  border-color: var(--borda);
+}
+
+.acoes button:not(.perigo):hover {
+  background-color: var(--borda);
+}
+
+/* Etiquetas de status */
+.status {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status.online,
+.status.pronto {
+  background-color: #1f3d22;
+  color: var(--verde);
+  border: 1px solid var(--verde);
+}
+
+.status.offline,
+.status.nao-pronto {
+  background-color: #3d1f1f;
+  color: #ff8c8c;
+  border: 1px solid #ff8c8c;
+}
+
+/* Botão de ação perigosa (excluir) */
+button.perigo {
+  background-color: transparent;
+  color: #ff8c8c;
+  border-color: var(--vermelho);
+}
+
+button.perigo:hover {
+  background-color: var(--vermelho);
+  color: #ffffff;
+}

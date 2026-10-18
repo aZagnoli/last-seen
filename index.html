@@ -129,6 +129,13 @@
             </p>
           </fieldset>
         </form>
+
+        <p class="mensagem sucesso" role="status">
+          Jogador cadastrado com sucesso na sala.
+        </p>
+        <p class="mensagem erro" role="alert">
+          Preencha todos os campos obrigatórios antes de cadastrar.
+        </p>
       </section>
 
       <section id="jogadores" aria-labelledby="titulo-jogadores">
@@ -198,42 +205,52 @@
           <tbody>
             <tr>
               <th scope="row">August</th>
-              <td>Caça</td>
-              <td>Online</td>
-              <td>Pronto</td>
-              <td>-19.9245, -43.9352</td>
-              <td>
+              <td data-label="Papel">Caça</td>
+              <td data-label="Conexão"><span class="status online">Online</span></td>
+              <td data-label="Prontidão"><span class="status pronto">Pronto</span></td>
+              <td data-label="Posição GPS">-19.9245, -43.9352</td>
+              <td data-label="Ações">
+                <div class="acoes">
                 <a href="#detalhes">Ver detalhes</a>
                 <button type="button">Editar</button>
-                <button type="button">Excluir</button>
+                <button type="button" class="perigo">Excluir</button>
+              </div>
               </td>
             </tr>
             <tr>
               <th scope="row">Zagno</th>
-              <td>Caçador</td>
-              <td>Online</td>
-              <td>Pronto</td>
-              <td>-19.9220, -43.9370</td>
-              <td>
+              <td data-label="Papel">Caçador</td>
+              <td data-label="Conexão"><span class="status online">Online</span></td>
+              <td data-label="Prontidão"><span class="status pronto">Pronto</span></td>
+              <td data-label="Posição GPS">-19.9220, -43.9370</td>
+              <td data-label="Ações">
+                <div class="acoes">
                 <a href="#detalhes">Ver detalhes</a>
                 <button type="button">Editar</button>
-                <button type="button">Excluir</button>
+                <button type="button" class="perigo">Excluir</button>
+              </div>
               </td>
             </tr>
             <tr>
               <th scope="row">Vieira</th>
-              <td>Caça</td>
-              <td>Offline</td>
-              <td>Não pronta</td>
-              <td>-19.9280, -43.9401</td>
-              <td>
+              <td data-label="Papel">Caça</td>
+              <td data-label="Conexão"><span class="status offline">Offline</span></td>
+              <td data-label="Prontidão"><span class="status nao-pronto">Não pronta</span></td>
+              <td data-label="Posição GPS">-19.9280, -43.9401</td>
+              <td data-label="Ações">
+                <div class="acoes">
                 <a href="#detalhes">Ver detalhes</a>
                 <button type="button">Editar</button>
-                <button type="button">Excluir</button>
+                <button type="button" class="perigo">Excluir</button>
+              </div>
               </td>
             </tr>
           </tbody>
         </table>
+
+        <p class="mensagem aviso" role="status">
+          Nenhum jogador encontrado para os filtros selecionados.
+        </p>
       </section>
 
       <section id="detalhes" aria-labelledby="titulo-detalhes">
@@ -262,7 +279,7 @@
 
           <p>
             <button type="button">Editar jogador</button>
-            <button type="button">Excluir jogador</button>
+            <button type="button" class="perigo">Excluir jogador</button>
           </p>
         </article>
       </section>
