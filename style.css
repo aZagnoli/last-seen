@@ -426,3 +426,87 @@ dd {
   border-color: #ffd166;
   color: #ffd166;
 }
+
+/* ===== Responsividade (Media Queries) ===== */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.75rem;
+  }
+
+  #detalhes,
+  aside {
+    grid-column: 1 / -1;
+  }
+
+  header {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  main > section,
+  main > aside {
+    padding: 1rem;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+
+  dd {
+    margin-bottom: 0.6rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .acoes button,
+  .acoes a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  /* Tabela vira lista de cartões em telas pequenas */
+  table,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    position: absolute;
+    left: -9999px;
+  }
+
+  tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background-color: var(--painel-claro);
+  }
+
+  tbody th {
+    color: var(--vermelho);
+    font-size: 1.2rem;
+  }
+
+  td[data-label]::before {
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    color: var(--texto-suave);
+  }
+}
